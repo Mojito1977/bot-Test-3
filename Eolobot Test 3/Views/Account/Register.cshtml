@@ -1,0 +1,16 @@
+﻿@page
+@model Eolobot_Test_3.Views.Account.RegisterModel
+@{
+
+    <h2>Register</h2>
+
+    <form method="post">
+        <input name="username" placeholder="Username" required />
+        <input name="email" placeholder="Email" required />
+        <input name="password" type="password" placeholder="Password" required />
+        <button type="submit">Register</button>
+    </form>
+
+    <p style="color:red">@ViewBag.Error</p>
+
+}

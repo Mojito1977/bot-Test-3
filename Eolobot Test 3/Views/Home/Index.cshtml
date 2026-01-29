@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Assistenza Eolo - Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="light">
+
+    <!-- SWITCH TEMA -->
+    <div class="theme-switch">
+        <label class="switch">
+            <input type="checkbox" id="themeToggle">
+            <span class="slider"></span>
+        </label>
+        <span class="theme-label">Light Mode</span>
+    </div>
+
+    <div class="app">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="robot">
+                <svg viewBox="0 0 200 240">
+                    <!-- Ombra -->
+                    <ellipse cx="100" cy="220" rx="45" ry="12" fill="#0003" />
+
+                    <!-- Corpo -->
+                    <rect x="55" y="110" width="90" height="90" rx="25" fill="#e9f4ff" stroke="#4da3ff" stroke-width="4" />
+
+                    <!-- Pannello centrale -->
+                    <rect x="75" y="135" width="50" height="40" rx="10" fill="#cfe6ff" stroke="#4da3ff" stroke-width="3" />
+
+                    <!-- Testa -->
+                    <rect x="40" y="20" width="120" height="90" rx="40" fill="#e9f4ff" stroke="#4da3ff" stroke-width="4" />
+
+                    <!-- Schermo facciale -->
+                    <rect x="55" y="35" width="90" height="60" rx="20" fill="#0a0f1f" />
+
+                    <!-- Occhi luminosi -->
+                    <circle cx="85" cy="65" r="12" fill="#4da3ff" />
+                    <circle cx="115" cy="65" r="12" fill="#4da3ff" />
+
+                    <!-- Pupille -->
+                    <circle cx="85" cy="65" r="6" fill="#e9f4ff" />
+                    <circle cx="115" cy="65" r="6" fill="#e9f4ff" />
+
+                    <!-- Antenna -->
+                    <line x1="100" y1="20" x2="100" y2="5" stroke="#4da3ff" stroke-width="5" stroke-linecap="round" />
+                    <circle cx="100" cy="5" r="7" fill="#4da3ff" />
+
+                    <!-- Braccia -->
+                    <rect x="25" y="120" width="25" height="60" rx="12" fill="#e9f4ff" stroke="#4da3ff" stroke-width="4" />
+                    <rect x="150" y="120" width="25" height="60" rx="12" fill="#e9f4ff" stroke="#4da3ff" stroke-width="4" />
+
+                    <!-- Gambe -->
+                    <rect x="70" y="200" width="25" height="35" rx="10" fill="#e9f4ff" stroke="#4da3ff" stroke-width="4" />
+                    <rect x="105" y="200" width="25" height="35" rx="10" fill="#e9f4ff" stroke="#4da3ff" stroke-width="4" />
+                </svg>
+            </div>
+
+            <h2>EOLO Bot</h2>
+            <p>Assistenza clienti automatica</p>
+        </aside>
+
+        <!-- AREA CHAT -->
+        <main class="chat-area">
+
+            <header class="chat-header">
+                <h1>Assistenza Eolo</h1>
+                <p>Chatbot ibrido (AI + flussi guidati)</p>
+            </header>
+
+            <div id="chat-window"></div>
+
+            <div class="quick-actions">
+                <button data-action="problemi_connessione">Problemi di connessione</button>
+                <button data-action="info_offerte">Offerte e piani</button>
+                <button data-action="fatture_pagamenti">Fatture e pagamenti</button>
+            </div>
+
+            <div class="input-area">
+                <input id="user-input" type="text" placeholder="Scrivi un messaggio...">
+                <button id="send-btn">Invia</button>
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- SUONI (aggiungi i file nella stessa cartella) -->
+    <audio id="send-sound" src="send-pop.mp3" preload="auto"></audio>
+    <audio id="receive-sound" src="receive-pop.mp3" preload="auto"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
